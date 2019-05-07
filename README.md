@@ -1,29 +1,22 @@
-# README #
+#**Head Pose Estimator**#
+This program determines which part of your computer screen you are looking at.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+##**Libraries Used**##
+-   [dlib](http://dlib.net/) - Face detection and facial feature prediction
 
-### What is this repository for? ###
+-   opencv - image processing (i.e. convert grayscale to reduce noise, resize images to reduce searching area).
+head pose estimation.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+##**Notes**##
+-   Program calculates pitch, yaw, row of head and check if they are within preset ranges to determine
+which section you are looking at.
 
-### How do I get set up? ###
+-   There are 9 sections that can be controlled by head (left,right,up,down,center, corners).
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+##**Resources**##
+- https://www.learnopencv.com/head-pose-estimation-using-opencv-and-dlib/
 
-### Contribution guidelines ###
+- https://github.com/AKSHAYUBHAT/TensorFace/blob/master/openface/models/dlib/shape_predictor_68_face_landmarks.dat
 
-* Writing tests
-* Code review
-* Other guidelines
+- http://answers.opencv.org/question/16796/computing-attituderoll-pitch-yaw-from-solvepnp/?answer=52913#post-id-52913
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact

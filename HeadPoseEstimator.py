@@ -38,10 +38,8 @@ cameraMatrix = np.array(
 )
 
 # Calculate the pitch, yaw, roll of head
-# @Params: a video frame, dictionary of detected facical feature points
 def find_face_orientation(landmarks):
     # 2D Image points of detected features based on 68 point landmark detection
-    # https://ibug.doc.ic.ac.uk/media/uploads/images/annotpics/figure_68_markup.jpg
     detectedPoints = np.array([
         (landmarks[30][0], landmarks[30][1]),  # Nose tip
         (landmarks[8][0], landmarks[8][1]),  # Chin
@@ -52,8 +50,6 @@ def find_face_orientation(landmarks):
     ], dtype="double")
 
     # Generic 3D world coordinates
-    # These coordinates were predetermined using a 3D face modeling software
-    # Universally accepted for head post estimation.
     modelPoints = np.array([
         (0.0, 0.0, 0.0),  # Nose tip
         (0.0, -330.0, -65.0),  # Chin
@@ -80,8 +76,7 @@ def find_face_orientation(landmarks):
     # Project 3D points onto 2D image plane
     # Convert world coordinates into camera coordinates
     imgpts, _ = cv2.projectPoints(axis, rotationVect, translationVect, cameraMatrix, distCoeffs)
-    #modelpts, jac2 = cv2.projectPoints(model_points, rotation_vector, translation_vector, camera_matrix, dist_coeffs)
-
+  
     # Converts rotation vector into rotation matrix
     rvecMat = cv2.Rodrigues(rotationVect)[0]
     # Concatenate arrays
