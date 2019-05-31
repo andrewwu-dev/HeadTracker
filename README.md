@@ -11,7 +11,7 @@ head pose estimation.
 -   Program calculates pitch, yaw, row of head and check if they are within preset ranges to determine
 which section you are looking at.
 
--   There are 9 sections that can be controlled by head (left,right,up,down,center, corners).
+-   There are 9 sections of your screen that can be detected (left, right, up, down, center, corners).
 
 ## **Resources**
 - https://www.learnopencv.com/head-pose-estimation-using-opencv-and-dlib/
