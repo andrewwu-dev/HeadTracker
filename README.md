@@ -1,4 +1,4 @@
-# **Head Pose Estimator**
+# **HeadTracker**
 This program determines which part of your computer screen you are looking at.
 
 ## **Libraries Used**
